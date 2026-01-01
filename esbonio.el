@@ -4,7 +4,7 @@
 
 ;; Author: Alex Carney <alcarneyme@gmail.com>
 ;; URL: https://github.com/swyddfa/esbonio.el
-;; Version: 0.2
+;; Version: 0.2.1
 ;; Package-Requires: ((emacs "30.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -161,7 +161,7 @@ documentation preview."
 (with-eval-after-load 'lsp-mode
 
   (eval-and-compile  ; Trying to keep the byte-compiler happy...
-    (require 'lsp-mode))
+    (require 'lsp-mode nil t))
 
   (lsp-register-client
    (make-lsp-client
