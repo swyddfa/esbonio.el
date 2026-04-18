@@ -6,13 +6,36 @@ It also exposes the functionality provided by the language server that falls out
 
 Requires Emacs 30.1
 
-## Setup (eglot)
+## Setup
 
-Install the esbonio language server if you haven't already
+Install the esbonio language using a tool like `uv`
+```
+uv tool install esbonio
+```
+
+or `pipx`
 
 ```
-pipx install --pre esbonio
+pipx install esbonio
 ```
+
+Once installed, ensure the `esbonio` command is available on your `PATH`
+```
+$ esbonio --help
+usage: esbonio [-h] [--version] {server} ...
+
+The Esbonio language server
+
+options:
+  -h, --help  show this help message and exit
+  --version   print the current version and exit.
+
+commands:
+  {server}
+    server    launch the esbonio language server
+```
+
+### eglot
 
 Add the following configuration to your ``init.el``
 
@@ -22,13 +45,7 @@ Add the following configuration to your ``init.el``
   :hook ((rst-mode . esbonio-eglot-ensure)))
 ```
 
-## Setup (lsp-mode)
-
-Install the esbonio language server if you haven't already
-
-```
-pipx install --pre esbonio
-```
+### lsp-mode
 
 Add the following configuration to your `init.el`
 
