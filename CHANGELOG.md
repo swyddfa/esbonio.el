@@ -1,3 +1,7 @@
+# v0.2.2 - 2026-04-18
+
+- Fix default value for `esbonio-server-command` to align with the `v2.x` release of the server.
+
 # v0.2.1 - 2026-01-01
 
 - Fix eager macro-expansion failure when `lsp-mode` is not installed
